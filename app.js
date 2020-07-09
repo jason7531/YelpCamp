@@ -32,13 +32,20 @@ app.use(passport.session());
 passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-mongoose.connect(
-    "mongodb+srv://jason2004:sharma2004@cluster0.ugnh0.mongodb.net/yelp_camp?retryWrites=true&w=majority", {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useFindAndModify: false,
-    }
-);
+mongoose
+    .connect(
+        "mongodb+srv://jason2004:sharma2004@cluster0.ugnh0.mongodb.net/yelp_camp?retryWrites=true&w=majority", {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useFindAndModify: false,
+        }
+    )
+    .then(() => {
+        console.log("Connected to DB");
+    })
+    .catch((err) => {
+        console.log("ERROR: ", err.message);
+    });
 //adding current user to every template
 app.use(function(req, res, next) {
     res.locals.currentUser = req.user;
