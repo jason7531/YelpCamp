@@ -1,0 +1,55 @@
+body {
+    background-image: url("https://wallpaperaccess.com/full/429863.jpg");
+    background-size: cover;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0%;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.jumbotron {
+    background-color: rgba(10, 130, 4, 0.4);
+}
+
+.jumbotron h1 {
+    color: white;
+}
+
+.login-head {
+    color: white;
+    text-align: center;
+}
+
+.register-head {
+    color: white;
+    text-align: center;
+}
+
+.jumbotron p {
+    color: white;
+}
+
+.row h1 {
+    color: white;
+}
+
+#landing-heading {
+    font-size: 60px;
+}
+
+.lead {
+    color: white;
+}
+
+.fas {
+    padding-top: 15%;
+    size: 20px;
+}
