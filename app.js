@@ -34,7 +34,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 mongoose
     .connect(
-        "mongodb+srv://jason2004:sharma2004@cluster0.ugnh0.mongodb.net/yelp_camp?retryWrites=true&w=majority", {
+        "<mongo atlas generated URL>", {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useFindAndModify: false,
